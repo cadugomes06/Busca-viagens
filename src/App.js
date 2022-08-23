@@ -11,11 +11,11 @@ const App = () => {
     <div>
         <Header />
 
-        <div className='grid grid-cols-2 w-full'>
+        <div className='grid grid-cols-3 w-full'>
             <div>
                 <List />
             </div>
-            <div>
+            <div className='grid-colums col-span-2	'>
                 <Map />
             </div>
         </div>

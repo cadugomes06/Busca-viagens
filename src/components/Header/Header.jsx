@@ -1,5 +1,5 @@
 import React from 'react'
-import { Autocomplete } from '@react-google-maps/api'
+//import { Autocomplete } from '@react-google-maps/api'
 import { BiSearchAlt } from 'react-icons/bi'
 
 
@@ -23,10 +23,11 @@ const Header = () => {
                  <BiSearchAlt />
                <input className='outline-none pb-1 pl-1 w-46 h-8 flex rounded'
                 type='text' 
-                placeholder='procurar'
+                placeholder='Explorar...'
                  />
                 </div> 
-            </div>   
+                
+            </div>             
     </div> 
             </>   
   )
