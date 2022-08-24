@@ -15,7 +15,7 @@ const App = () => {
             <div>
                 <List />
             </div>
-            <div className='grid-colums col-span-2	'>
+            <div className='grid-colums col-span-2'>
                 <Map />
             </div>
         </div>

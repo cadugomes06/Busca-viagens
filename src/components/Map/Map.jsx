@@ -1,7 +1,6 @@
 import React from 'react';
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
-;
-
+import PlaceDetails from '../PlaceDetails/PlaceDatail'
 
 const Map = () => {
   const coordinates = { lat: -22.346044136649493, lng: -41.799172695733546};
@@ -16,7 +15,10 @@ const Map = () => {
       <GoogleMap
         mapContainerStyle={{width: '100%', height: '100%'}}
         center={coordinates}
-        zoom={12}
+        zoom={10}
+        options={''}
+        onChange={''}
+        onChildClick={''}
       >
        <Marker position={coordinates} options={{
         label: 'Pontinho na tela'
