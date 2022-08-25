@@ -1,9 +1,9 @@
 import React from 'react';
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
-import PlaceDetails from '../PlaceDetails/PlaceDatail'
+//import PlaceDetails from '../PlaceDetails/PlaceDatail'
 
-const Map = () => {
-  const coordinates = { lat: -22.346044136649493, lng: -41.799172695733546};
+const Map = ({ setCoordinates, setBounds, coordinates }) => {
+  
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
     googleMapsApiKey: "AIzaSyCPJVWBJ0d6UomtTUGao178ch1nc2VAA9M"
@@ -17,7 +17,10 @@ const Map = () => {
         center={coordinates}
         zoom={10}
         options={''}
-        onChange={''}
+        onChange={(e) => {
+          console.log(e)
+          setCoordinates({ lat: e.center.lat, lng: e.center.lng })
+        }}
         onChildClick={''}
       >
        <Marker position={coordinates} options={{
