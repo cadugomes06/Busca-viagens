@@ -19,13 +19,11 @@ const Map = ({ setCoordinates, setBounds, coordinates }) => {
         options={''}
         onChange={(e) => {
           console.log(e)
-          setCoordinates({ lat: e.center.lat, lng: e.center.lng })
+          setCoordinates({ lat: e.center.lat, lng: e.center.lng})
         }}
         onChildClick={''}
       >
-       <Marker position={coordinates} options={{
-        label: 'Pontinho na tela'
-      }} />
+       
       </GoogleMap>
   ) : <></>}
       </div>
