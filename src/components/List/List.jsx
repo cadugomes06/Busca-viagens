@@ -50,7 +50,7 @@ const List = () => {
 
         <div className='grid grid-cols-2'>
           {places?.map((place, i ) => (
-            <div item key={i} className="col-span-2">
+            <div  key={i} className="col-span-2">
                 <PlaceDatail place={place} />
                </div>
           ))}

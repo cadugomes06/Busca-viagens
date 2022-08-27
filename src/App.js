@@ -10,7 +10,7 @@ const App = () => {
   const [places, setPlaces] = useState([])
 
   const [coordinates, setCoordinates] = useState({})
-  const [bounds, setBounds] = useState(null)
+  const [bounds, setBounds] = useState()
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(({ coords: {latitude, longitude } }) => {
@@ -19,9 +19,8 @@ const App = () => {
   }, [])
 
   useEffect(() => {
-    console.log(coordinates, bounds)
+    getPlacesData( bounds, bounds)
 
-    getPlacesData()
     .then((data) => {
       setPlaces(data);
     })
@@ -33,7 +32,7 @@ const App = () => {
 
         <div className='grid grid-cols-3 w-full'>
             <div>
-                <List />
+                <List places={places} />
             </div>
             <div className='grid-colums col-span-2'>
                 <Map 
