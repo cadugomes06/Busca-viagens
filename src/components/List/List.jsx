@@ -37,7 +37,7 @@ const List = () => {
 
         <form> 
         <select  value={rating}
-         onChange={({target}) => setType(target.value)} placeholder="Avaliação"
+         onChange={({target}) => setRating(target.value)} placeholder="Avaliação"
          className="mr-2 outline-none rounded-md  bg-gray-300"
          >
           <option>Todos</option>

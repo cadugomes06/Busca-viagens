@@ -1,8 +1,10 @@
 import React from 'react';
-import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
+import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
 //import PlaceDetails from '../PlaceDetails/PlaceDatail'
 
-const Map = ({ setCoordinates, setBounds, coordinates }) => {
+const Map = ({ setCoordinates, setBounds, coordinates}) => {
+
+  //const coordinates = {lat: -22.379679077866935, lng: -41.810342324505775}
   
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
@@ -15,12 +17,13 @@ const Map = ({ setCoordinates, setBounds, coordinates }) => {
       <GoogleMap
         mapContainerStyle={{width: '100%', height: '100%'}}
         center={coordinates}
-        zoom={10}
+        zoom={14}
         options={''}
-        onChange={(e) => {
-          console.log(e)
-          setCoordinates({ lat: e.center.lat, lng: e.center.lng})
+        onCenterChanged={(e) => {
+          console.log(e.center.lat)
+          setCoordinates({lat: e.center.lat, lng: e.center.lng})
         }}
+        
         onChildClick={''}
       >
        
